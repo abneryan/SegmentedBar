@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rv_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/report_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
+        android:textSize="12sp"
+        android:textColor="#848E9A"
+        android:paddingLeft="16dp"
+        android:background="#f3f3f3"
+        android:gravity="center_vertical"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/report_item_fold_rl"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@+id/report_title_tv"
+        android:background="@drawable/item_bg_selector"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/report_item_arrow_iv"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="13dp"
+            android:layout_marginLeft="13dp"
+            android:src="@mipmap/arrow_down" />
+        <TextView
+            android:id="@+id/report_item_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/report_item_arrow_iv"
+            android:gravity="center"
+            android:textColor="#ABB5C0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/report_item_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:textColor="#475669"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/report_item_level_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:minWidth="36dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:layout_toRightOf="@+id/report_item_name_tv"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="12dp"
+            android:singleLine="true"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:id="@+id/report_item_expandableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/report_item_fold_rl"
+        android:layout_alignParentStart="true"
+        android:background="#f3f3f3"
+        app:el_parallax="0.5"
+        app:el_duration="400"
+        app:el_expanded="false">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="24dp">
+
+            <com.abneryan.segmentedbar.view.SegmentedBarView
+                android:id="@+id/report_item_body_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="20dp"
+                app:sbv_bar_height="4dp"
+                app:sbv_description_height="18dp"
+                app:sbv_description_text_size="14sp"
+                app:sbv_description_text_color ="@color/color_475669"
+                app:sbv_point_circle_border_size="1dp"
+                app:sbv_point_circle_radius="3dp"
+                app:sbv_bar_rounding_radius_size ="4.5dp"
+                app:sbv_description_paddingtop ="12dp"
+                app:sbv_body_icon_height ="37dp"
+                app:sbv_segment_most_number = "5"/>
+
+        <TextView
+            android:id="@+id/report_item_desc_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="17dp"
+            android:paddingEnd="17dp"
+            android:paddingTop="24dp"
+            android:gravity="center_vertical"
+            android:textColor="#848E9A"
+            android:textSize="14sp"/>
+        </LinearLayout>
+    </net.cachapa.expandablelayout.ExpandableLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="#e5e5e5"
+        android:layout_marginLeft="16dp"/>
+</RelativeLayout>

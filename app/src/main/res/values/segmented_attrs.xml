@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SegmentedBarView">
+        <attr name="sbv_description_text_size" format="dimension" />
+        <attr name="sbv_bar_height" format="dimension" />
+        <attr name="sbv_description_height" format="dimension" />
+        <attr name="sbv_description_text_color" format="color" />
+        <attr name="sbv_point_circle_radius" format="dimension" />
+        <attr name="sbv_point_circle_border_size" format="dimension" />
+        <attr name="sbv_bar_rounding_radius_size" format="dimension" />
+        <attr name="sbv_description_paddingtop" format="dimension" />
+        <attr name="sbv_body_icon_height" format="dimension" />
+        <attr name="sbv_segment_most_number" format="integer" />
+    </declare-styleable>
+</resources>
