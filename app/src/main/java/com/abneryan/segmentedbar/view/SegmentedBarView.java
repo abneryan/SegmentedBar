@@ -44,7 +44,7 @@ public class SegmentedBarView extends View {
     private int segmentMostNum;
     private Paint descriptionTextPaint;
 
-    private ArrayList<Integer> segmentPointsColors = new ArrayList<>(); //分割点颜色
+    private List<Integer> segmentPointsColors = new ArrayList<>(); //分割点颜色
 
     private Rect segmentRect;
 
@@ -257,35 +257,36 @@ public class SegmentedBarView extends View {
         if(segments.size()<= segmentMostNum){ //总数据长度小于目标长度
             this.segments = segments;
         } else{//总数据长度大于，等于目标长度
-            List<Segment> tempSegments = new ArrayList<>();
             int indictorIndex = -1;
             for(int i = 0;i<segments.size();i++){ //获取指标当前值所对应的索引
                 if(resultRangeMap.get(indicatorResult).equals(segments.get(i).getDescriptionText())){
                     indictorIndex = i;
                 }
             }
-            if(indictorIndex < segmentMostNum){ //当前指标结果位置在[0,目标]范围内
-                for(int j = indictorIndex ;j >= 0; j--){
-                    tempSegments.add(indictorIndex,segments.get(j));
-                }
-                int temSegmentCount = tempSegments.size();
-                if(temSegmentCount<segmentMostNum){//获取目标集合个数小于目标集合数，需要从当前指标右侧补齐
-                    for(int k = 0; k<segmentMostNum - temSegmentCount; k++){
-                        tempSegments.add(indictorIndex + k + 1,segments.get(indictorIndex + k + 1));
-                    }
-                }
-            } else{//当前指标结果位置在[目标,目标+]范围内,此时需要从目标位置向左侧获取目标集合
-                for(int k = 0;k<segmentMostNum; k++){
-                    tempSegments.add(segmentMostNum - 1- k,segments.get(indictorIndex - 1 - k));
-                }
+            if (indictorIndex < segmentMostNum) {//当前位置在规定分段数目的左侧
+                this.segments = segments.subList(0, segmentMostNum);
+            } else {//当前位置在规定分段数目的右侧
+                this.segments = segments.subList(indictorIndex - segmentMostNum + 1, indictorIndex + 1);
             }
-
-            this.segments = tempSegments;
-
         }
     }
     private void setSegmentPointColors(ArrayList<Integer> segmentPointsColors) {
-        this.segmentPointsColors = segmentPointsColors;
+        if (indicatorBean.getSegments().size() <= segmentMostNum) { //总数据长度小于目标长度
+            this.segmentPointsColors = segmentPointsColors;
+        } else {//总数据长度大于，等于目标长度
+            int indictorIndex = -1;
+            for (int i = 0; i < indicatorBean.getSegments().size(); i++) { //获取指标当前值所对应的索引
+                if (resultRangeMap.get(indicatorResult).equals(indicatorBean.getSegments().get(i).getDescriptionText())) {
+                    indictorIndex = i;
+                }
+            }
+            if (indictorIndex < segmentMostNum) {//当前位置在规定分段数目的左侧
+                this.segmentPointsColors = segmentPointsColors.subList(0, segmentMostNum - 1);
+            } else {//当前位置在规定分段数目的右侧
+                this.segmentPointsColors = segmentPointsColors.subList(indictorIndex - segmentMostNum + 1, indictorIndex);
+            }
+
+        }
     }
 
     private void setResultRangeMap(Map<String, String> resultRangeMap) {
