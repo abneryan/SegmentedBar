@@ -952,4 +952,399 @@
  "indicatorValue":"-35.45"
 }
 ]</string>
+    <string name="indicator_json2">
+    [{
+    "indicatorDesc": "通过合理运动和营养干预可以使体重保持在理想范围，从而获得更好看、更健康的身材。",
+    "indicatorKey": "weight",
+    "indicatorName": "体重",
+    "indicatorNote": "体重不足，需要保证一日三餐的正常摄入，多吃有营养的食物，适当的运动也非常重要哦！",
+    "indicatorResult": "0",
+    "indicatorResultRange": [{
+    "rangeName": "不足",
+    "rangeValue": "0"
+    }, {
+    "rangeName": "过轻",
+    "rangeValue": "1"
+    }, {
+    "rangeName": "标准",
+    "rangeValue": "2"
+    }, {
+    "rangeName": "过重",
+    "rangeValue": "3"
+    }, {
+    "rangeName": "肥胖",
+    "rangeValue": "4"
+    }],
+    "indicatorUnit": "kg",
+    "indicatorValue": "42.1",
+    "indicatorValueRange": ["0", "53.76", "60.48", "73.92", "80.64", "120.96"]
+    }, {
+    "indicatorDesc": "去脂体重又称瘦体重，即体内的非脂肪成分，其中肌肉和骨骼占很大比重，这是影响身体活动能力的重要因素。",
+    "indicatorKey": "lbm",
+    "indicatorName": "去体脂重",
+    "indicatorNote": "去脂体重是除脂肪以外身体其他成分的重量，肌肉是主要部分。可以看出您锻炼的效果，也可以看出您减肥的潜力哦~！",
+    "indicatorUnit": "kg",
+    "indicatorValue": "39.15"
+    }, {
+    "indicatorDesc": "BMI又称身体质量指数，在一定程度上可以反映人的胖瘦情况，适宜的BMI是保持健康和好身材的前提。",
+    "indicatorKey": "bmi",
+    "indicatorName": "BMI",
+    "indicatorNote": "目前BMI指数较低，属于偏瘦人群。身体获得不到必要的营养供给，容易造成免疫力低下，容易疲倦。补充营养，坚持锻炼，身材会更好喔！",
+    "indicatorResult": "0",
+    "indicatorResultRange": [{
+    "rangeName": "瘦小",
+    "rangeValue": "0"
+    }, {
+    "rangeName": "正常",
+    "rangeValue": "1"
+    }, {
+    "rangeName": "偏胖",
+    "rangeValue": "2"
+    }, {
+    "rangeName": "肥胖",
+    "rangeValue": "3"
+    }],
+    "indicatorValue": "13.59",
+    "indicatorValueRange": ["0", "18.5", "25", "30", "45"]
+    }, {
+    "indicatorDesc": "体脂率即脂肪重量占体重的百分比，男性体脂率达到12-14%，女性体脂率达到20-22%，就能看到较明显的肌肉线条。",
+    "indicatorKey": "pbf",
+    "indicatorName": "体脂率",
+    "indicatorNote": "当前体脂率偏低。需要保证营养的摄入，增加食量，多做有氧运动。",
+    "indicatorResult": "0",
+    "indicatorResultRange": [{
+    "rangeName": "偏瘦",
+    "rangeValue": "0"
+    }, {
+    "rangeName": "健康型",
+    "rangeValue": "1"
+    }, {
+    "rangeName": "警戒型",
+    "rangeValue": "2"
+    }, {
+    "rangeName": "轻度肥胖",
+    "rangeValue": "3"
+    }, {
+    "rangeName": "重度肥胖",
+    "rangeValue": "4"
+    }],
+    "indicatorUnit": "%",
+    "indicatorValue": "7.01",
+    "indicatorValueRange": ["1", "11", "17", "22", "27", "40.5"]
+    }, {
+    "indicatorDesc": "脂肪量即身体内所含脂肪的总重量。脂肪量包含皮下脂肪和内脏脂肪两种脂肪的重量。",
+    "indicatorKey": "fm",
+    "indicatorName": "脂肪重量",
+    "indicatorNote": "当前体脂率偏低。需要保证营养的摄入，增加食量，多做有氧运动。",
+    "indicatorResult": "0",
+    "indicatorResultRange": [{
+    "rangeName": "偏瘦",
+    "rangeValue": "0"
+    }, {
+    "rangeName": "健康型",
+    "rangeValue": "1"
+    }, {
+    "rangeName": "警戒型",
+    "rangeValue": "2"
+    }, {
+    "rangeName": "轻度肥胖",
+    "rangeValue": "3"
+    }, {
+    "rangeName": "重度肥胖",
+    "rangeValue": "4"
+    }],
+    "indicatorUnit": "kg",
+    "indicatorValue": "2.95",
+    "indicatorValueRange": ["0.42", "4.63", "7.16", "9.26", "11.37", "17.05"]
+    }, {
+    "indicatorDesc": "肌肉率是根据人体肌肉总量和人体体重、身高等相结合得到的人体的一个比例值，这个值的范围决定一个人的身体健康状况以及力量的多少。",
+    "indicatorKey": "musr",
+    "indicatorName": "肌肉率",
+    "indicatorNote": "您的肌肉含量不足。运动过少和节食是肌肉流失的主要原因。想要获得健美的身材建议您注意饮食，保证蛋白质摄入，并加强运动。",
+    "indicatorResult": "0",
+    "indicatorResultRange": [{
+    "rangeName": "不足",
+    "rangeValue": "0"
+    }, {
+    "rangeName": "标准",
+    "rangeValue": "1"
+    }, {
+    "rangeName": "优",
+    "rangeValue": "2"
+    }],
+    "indicatorUnit": "%",
+    "indicatorValue": "88.76",
+    "indicatorValueRange": ["0", "117.34", "141.09", "211.64"]
+    }, {
+    "indicatorDesc": "肌肉量是根据人体肌肉总量和人体体重、身高等相结合得到的人体的一个比例值，这个值的范围决定一个人的身体健康状况以及力量的多少。",
+    "indicatorKey": "mus",
+    "indicatorName": "肌肉重量",
+    "indicatorNote": "您的肌肉含量不足。运动过少和节食是肌肉流失的主要原因。想要获得健美的身材建议您注意饮食，保证蛋白质摄入，并加强运动。",
+    "indicatorResult": "0",
+    "indicatorResultRange": [{
+    "rangeName": "不足",
+    "rangeValue": "0"
+    }, {
+    "rangeName": "标准",
+    "rangeValue": "1"
+    }, {
+    "rangeName": "优",
+    "rangeValue": "2"
+    }],
+    "indicatorUnit": "kg",
+    "indicatorValue": "37.37",
+    "indicatorValueRange": ["0", "49.4", "59.4", "89.1"]
+    }, {
+    "indicatorDesc": "运动系统的肌肉属于横纹肌，由于绝大部分依附于骨，所以又称骨骼肌。它连接着骨，在收缩与伸张时带动了骨的运动。骨骼肌是机体运动能力的来源。",
+    "indicatorKey": "smm",
+    "indicatorName": "骨骼肌重量",
+    "indicatorNote": "恭喜你，骨骼肌含量达标，多运动，保持蛋白质摄入量可以有效保持或提高骨骼肌含量。",
+    "indicatorResult": "2",
+    "indicatorResultRange": [{
+    "rangeName": "不足",
+    "rangeValue": "0"
+    }, {
+    "rangeName": "标准",
+    "rangeValue": "1"
+    }, {
+    "rangeName": "优",
+    "rangeValue": "2"
+    }],
+    "indicatorUnit": "kg",
+    "indicatorValue": "25.41",
+    "indicatorValueRange": ["0", "20.63", "24.84", "37.26"]
+    }, {
+    "indicatorDesc": "基础代谢指的是人在不进行脑力与体力活动时所消耗的热量。",
+    "indicatorKey": "bm",
+    "indicatorName": "基础代谢",
+    "indicatorNote": "基础代谢率是指人在静止的状态下消耗的热量。您的基础代谢达标，坚持运动可以提高基础代谢，有助于消除工作带来的疲劳。",
+    "indicatorResult": "1",
+    "indicatorResultRange": [{
+    "rangeName": "不足",
+    "rangeValue": "0"
+    }, {
+    "rangeName": "标准",
+    "rangeValue": "1"
+    }],
+    "indicatorUnit": "千卡",
+    "indicatorValue": "1318",
+    "indicatorValueRange": ["0", "939", "1408"]
+    }, {
+    "indicatorDesc": "身体年龄是指一个人生理学上的年龄。是一个全新的概念，代表这个人的生命活力。身体年龄的高低，主要取决于人的生活方式和健康状况。",
+    "indicatorKey": "ba",
+    "indicatorName": "身体年龄",
+    "indicatorNote": "恭喜您，比实际年龄年轻呢！再接再厉！",
+    "indicatorResult": "0",
+    "indicatorResultRange": [{
+    "rangeName": "年轻",
+    "rangeValue": "0"
+    }, {
+    "rangeName": "偏大",
+    "rangeValue": "1"
+    }],
+    "indicatorUnit": "岁",
+    "indicatorValue": "23",
+    "indicatorValueRange": ["0", "30", "45"]
+    }, {
+    "indicatorDesc": "内脏脂肪等级反映内脏脂肪的堆积程度，腹部脂肪过多与内脏脂肪等级高密切相关。",
+    "indicatorKey": "vfi",
+    "indicatorName": "内脏脂肪等级",
+    "indicatorNote": "内脏脂肪水平正常，请继续保持合理的饮食和适量的运动！",
+    "indicatorResult": "0",
+    "indicatorResultRange": [{
+    "rangeName": "标准（健康型）",
+    "rangeValue": "0"
+    }, {
+    "rangeName": "标准（警戒型）",
+    "rangeValue": "1"
+    }, {
+    "rangeName": "偏高",
+    "rangeValue": "2"
+    }, {
+    "rangeName": "严重偏高",
+    "rangeValue": "3"
+    }],
+    "indicatorValue": "1",
+    "indicatorValueRange": ["1", "5", "10", "15", "23"]
+    }, {
+    "indicatorDesc": "水分率，身体水分占体重的百分比。这项指标能够反应减重的方式是否正确，如果水分率下降，不但有损健康，更会令体脂肪率上升。",
+    "indicatorKey": "tbw",
+    "indicatorName": "水分率",
+    "indicatorNote": "您现在的水分在正常范围内。多吃水果，多饮水，多做运动，多出汗，将有助您减少体内毒素堆积，保持皮肤光泽，富有弹性。",
+    "indicatorResult": "1",
+    "indicatorResultRange": [{
+    "rangeName": "不足",
+    "rangeValue": "0"
+    }, {
+    "rangeName": "标准",
+    "rangeValue": "1"
+    }, {
+    "rangeName": "高",
+    "rangeValue": "2"
+    }],
+    "indicatorUnit": "%",
+    "indicatorValue": "57.83",
+    "indicatorValueRange": ["0", "55", "65", "97.5"]
+    }, {
+    "indicatorDesc": "骨量指的是钙、磷等无机盐在体内的含量。",
+    "indicatorKey": "bone",
+    "indicatorName": "骨量",
+    "indicatorNote": "您的骨量偏低，需要避免高盐饮食和摄入过量咖啡、浓茶、碳酸饮料等，并且进行补钙和适量的有氧运动。",
+    "indicatorResult": "0",
+    "indicatorResultRange": [{
+    "rangeName": "偏低",
+    "rangeValue": "0"
+    }, {
+    "rangeName": "正常",
+    "rangeValue": "1"
+    }, {
+    "rangeName": "优",
+    "rangeValue": "2"
+    }],
+    "indicatorUnit": "kg",
+    "indicatorValue": "1.78",
+    "indicatorValueRange": ["0", "2.3", "2.7", "4.05"]
+    }, {
+    "indicatorDesc": "蛋白质是组成人体一切细胞、组织的重要成分。机体所有重要的组成部分都需要有蛋白质的参与。一般说，蛋白质约占人体全部质量的18%，最重要的还是其与生命现象有关。",
+    "indicatorKey": "protein",
+    "indicatorName": "蛋白质率",
+    "indicatorNote": "您的蛋白质含量不足，主要是营养摄入不足或消化不良导致。缺乏蛋白质会引起免疫力下降、肌肉无力和贫血。",
+    "indicatorResult": "0",
+    "indicatorResultRange": [{
+    "rangeName": "不足",
+    "rangeValue": "0"
+    }, {
+    "rangeName": "标准",
+    "rangeValue": "1"
+    }, {
+    "rangeName": "优",
+    "rangeValue": "2"
+    }],
+    "indicatorUnit": "%",
+    "indicatorValue": "13.08",
+    "indicatorValueRange": ["0", "16", "18", "27"]
+    }, {
+    "indicatorKey": "shape",
+    "indicatorName": "体型",
+    "indicatorValue": "偏瘦型"
+    }, {
+    "indicatorKey": "mc",
+    "indicatorName": "肌肉控制量",
+    "indicatorNote": "肌肉控制量是指您当前肌肉量与正常肌肉量之间的差值。您距标准肌肉质量还有0kg，注意增肌。",
+    "indicatorUnit": "kg",
+    "indicatorValue": "0"
+    }, {
+    "indicatorKey": "fc",
+    "indicatorName": "脂肪控制量",
+    "indicatorNote": "脂肪控制量是指您当前脂肪量与标准脂肪量之间的差值。您距标准脂肪质量还有0kg，注意减脂或增脂。",
+    "indicatorUnit": "kg",
+    "indicatorValue": "0"
+    }, {
+    "indicatorKey": "bs",
+    "indicatorName": "身体评分",
+    "indicatorValue": "71"
+    }, {
+    "indicatorKey": "ratioOfSkeletalMuscle",
+    "indicatorName": "骨骼肌率",
+    "indicatorNote": "恭喜你，骨骼肌含量达标，多运动，保持蛋白质摄入量可以有效保持或提高骨骼肌含量。",
+    "indicatorResult": "2",
+    "indicatorResultRange": [{
+    "rangeName": "不足",
+    "rangeValue": "0"
+    }, {
+    "rangeName": "标准",
+    "rangeValue": "1"
+    }, {
+    "rangeName": "优",
+    "rangeValue": "2"
+    }],
+    "indicatorUnit": "%",
+    "indicatorValue": "60.35",
+    "indicatorValueRange": ["0", "49", "59", "88.5"]
+    }, {
+    "indicatorKey": "ratioOfSubcutaneousFatRange",
+    "indicatorName": "皮下脂肪率",
+    "indicatorNote": "您的皮下脂肪偏低。平时需要多摄入一些营养，为身体补充能量。",
+    "indicatorResult": "0",
+    "indicatorResultRange": [{
+    "rangeName": "偏低",
+    "rangeValue": "0"
+    }, {
+    "rangeName": "正常",
+    "rangeValue": "1"
+    }, {
+    "rangeName": "偏高",
+    "rangeValue": "2"
+    }],
+    "indicatorUnit": "%",
+    "indicatorValue": "6.61",
+    "indicatorValueRange": ["0", "8.6", "16.7", "25.05"]
+    }, {
+    "indicatorKey": "weightOfProtein",
+    "indicatorName": "蛋白质重量",
+    "indicatorNote": "您的蛋白质含量不足，主要是营养摄入不足或消化不良导致。缺乏蛋白质会引起免疫力下降、肌肉无力和贫血。",
+    "indicatorResult": "0",
+    "indicatorResultRange": [{
+    "rangeName": "不足",
+    "rangeValue": "0"
+    }, {
+    "rangeName": "标准",
+    "rangeValue": "1"
+    }, {
+    "rangeName": "优",
+    "rangeValue": "2"
+    }],
+    "indicatorUnit": "kg",
+    "indicatorValue": "5.51",
+    "indicatorValueRange": ["0", "6.74", "7.58", "11.37"]
+    }, {
+    "indicatorKey": "weightOfWater",
+    "indicatorName": "水分重量",
+    "indicatorNote": "您现在的水分在正常范围内。多吃水果，多饮水，多做运动，多出汗，将有助您减少体内毒素堆积，保持皮肤光泽，富有弹性。",
+    "indicatorResult": "1",
+    "indicatorResultRange": [{
+    "rangeName": "不足",
+    "rangeValue": "0"
+    }, {
+    "rangeName": "标准",
+    "rangeValue": "1"
+    }, {
+    "rangeName": "高",
+    "rangeValue": "2"
+    }],
+    "indicatorUnit": "kg",
+    "indicatorValue": "24.35",
+    "indicatorValueRange": ["0", "23.16", "27.36", "41.05"]
+    }, {
+    "indicatorKey": "rateOfBurnFat",
+    "indicatorName": "燃脂心率次数",
+    "indicatorUnit": "次",
+    "indicatorValue": "114-152"
+    }, {
+    "indicatorKey": "stateOfNutrition",
+    "indicatorName": "营养状态",
+    "indicatorNote": "您属于严重营养不良状态，这将会危害您的健康。改掉挑食和偏食不良习惯，增加膳食的摄入量，膳食应丰富多样。建议每天三餐增加的营养摄入！",
+    "indicatorValue": "严重营养不良"
+    }, {
+    "indicatorKey": "desirableWeight",
+    "indicatorName": "标准体重",
+    "indicatorUnit": "kg",
+    "indicatorValue": "68.15"
+    }, {
+    "indicatorKey": "idealWeight",
+    "indicatorName": "理想体重",
+    "indicatorUnit": "kg",
+    "indicatorValue": "68.15"
+    }, {
+    "indicatorKey": "obesityLevel",
+    "indicatorName": "肥胖等级",
+    "indicatorValue": "正常"
+    }, {
+    "indicatorKey": "weightToControl",
+    "indicatorName": "体重控制量",
+    "indicatorNote": "体重控制量是当前体重与理想体重的差值。您距标准体重还有-26.05kg，注意减重或增重.",
+    "indicatorUnit": "kg",
+    "indicatorValue": "-26.05"
+    }]
+    </string>
 </resources>

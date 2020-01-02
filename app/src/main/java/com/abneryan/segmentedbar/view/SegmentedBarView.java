@@ -261,6 +261,7 @@ public class SegmentedBarView extends View {
             for(int i = 0;i<segments.size();i++){ //获取指标当前值所对应的索引
                 if(resultRangeMap.get(indicatorResult).equals(segments.get(i).getDescriptionText())){
                     indictorIndex = i;
+                    break;
                 }
             }
             if (indictorIndex < segmentMostNum) {//当前位置在规定分段数目的左侧
@@ -278,6 +279,7 @@ public class SegmentedBarView extends View {
             for (int i = 0; i < indicatorBean.getSegments().size(); i++) { //获取指标当前值所对应的索引
                 if (resultRangeMap.get(indicatorResult).equals(indicatorBean.getSegments().get(i).getDescriptionText())) {
                     indictorIndex = i;
+                    break;
                 }
             }
             if (indictorIndex < segmentMostNum) {//当前位置在规定分段数目的左侧

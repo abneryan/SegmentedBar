@@ -15,7 +15,6 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -25,7 +24,10 @@ public class SegementedPresenter implements SegemtedBarContract.Presenter {
 
     String[] keyArray = new String[]{
             "weight", "bmi", "pbf", "musr", "tbw", "bm", "vfi", "protein",
-            "bone", "ba", "shape", "lbm", "fm", "mus", "smm", "mc", "fc"
+            "bone", "ba", "shape", "lbm", "fm", "mus", "smm", "mc", "fc",
+            "ratioOfSkeletalMuscle","ratioOfSubcutaneousFatRange","weightOfProtein",
+            "weightOfWater","rateOfBurnFat","stateOfNutrition","desirableWeight","idealWeight",
+            "obesityLevel","weightToControl"
     };
     private SegemtedBarContract.View mView;
     private Context mContext;
@@ -37,7 +39,7 @@ public class SegementedPresenter implements SegemtedBarContract.Presenter {
 
     @Override
     public void getSegmentedDatas() {
-        String indicatorJson = mContext.getResources().getString(R.string.indicator_json1);
+        String indicatorJson = mContext.getResources().getString(R.string.indicator_json2);
         List<BodyFatWeighIndicatorInfo> list = new Gson().fromJson(indicatorJson,new TypeToken<ArrayList<BodyFatWeighIndicatorInfo>>(){}.getType());
 
         List<IndicatorBean> segmentedDataList = getBodyReportDataList(list);
