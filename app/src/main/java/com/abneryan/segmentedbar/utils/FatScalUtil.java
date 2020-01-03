@@ -21,7 +21,8 @@ public class FatScalUtil {
 
     public static final List<String> STANDARD_KEYS = Arrays.asList(
             "年轻","正常","标准","优","达标","理想","健康",
-            "偏高（优秀）","偏高(优)", "健康型","标准（健康型）", "标准（警戒型）");
+            "偏高（优秀）","偏高(优)", "健康型","标准（健康型）", "标准（警戒型）",
+            "标准型","模特型");
 
 
     public static int getBodyIconResourceId(int level) {

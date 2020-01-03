@@ -63,6 +63,7 @@ public class SegementedPresenter implements SegemtedBarContract.Presenter {
         }
 
         //测试报告列表：体重,BMI,脂肪率,肌肉率,水分率,基础代谢,内脏脂肪,蛋白质,骨量,身体年龄,体型,去脂体重,脂肪量,肌肉量,骨骼肌,肌肉控制,脂肪控制
+        //骨骼肌率,皮下脂肪率,蛋白质总量,水分重量,燃脂心率次数,营养状态,标准体重,理想体重,肥胖水平,体重控制量
         for(int i =0; i < keyArray.length; i++){
             if("bs".equals(keyArray[i])){
                 continue;
@@ -201,23 +202,22 @@ public class SegementedPresenter implements SegemtedBarContract.Presenter {
                 segmentedDataList.add(userDataBaseBean);
             }
         }
-        List<IndicatorBean> lowLevelDataList = new ArrayList<>();
+        List<IndicatorBean> unNormalLevelDataList = new ArrayList<>();
         List<IndicatorBean> normalLevelDataList = new ArrayList<>();
-        List<IndicatorBean> highLevelDataList = new ArrayList<>();
-        if(segmentedDataList!= null && !segmentedDataList.isEmpty()){ //分类
-            for(IndicatorBean bean: segmentedDataList){
-                if(bean.getIndicatorLevel() == FatScalUtil.LOW_LEVEL_VALUE){
-                    lowLevelDataList.add(bean);
-                } else if(bean.getIndicatorLevel() == FatScalUtil.NORMAL_LEVEL_VALUE){
+        if (segmentedDataList != null && !segmentedDataList.isEmpty()) { //分类
+            for (IndicatorBean bean : segmentedDataList) {
+                if (bean.getIndicatorResultRanges() == null && FatScalUtil.STANDARD_KEYS.contains(bean.getIndicatorValue())) {
                     normalLevelDataList.add(bean);
-                } else if(bean.getIndicatorLevel() == FatScalUtil.HIGH_LEVEL_VALUE){
-                    highLevelDataList.add(bean);
+                } else if (bean.getIndicatorLevel() == FatScalUtil.LOW_LEVEL_VALUE ||
+                        bean.getIndicatorLevel() == FatScalUtil.HIGH_LEVEL_VALUE) {
+                    unNormalLevelDataList.add(bean);
+                } else if (bean.getIndicatorLevel() == FatScalUtil.NORMAL_LEVEL_VALUE) {
+                    normalLevelDataList.add(bean);
                 }
             }
         }
         segmentedDataList.clear();
-        segmentedDataList.addAll(highLevelDataList);
-        segmentedDataList.addAll(lowLevelDataList);
+        segmentedDataList.addAll(unNormalLevelDataList);
         segmentedDataList.addAll(normalLevelDataList);
 
         //设置指标分类开始title数据
@@ -231,7 +231,7 @@ public class SegementedPresenter implements SegemtedBarContract.Presenter {
             if (!hasFindUnHealth && (indicatorLevel == FatScalUtil.LOW_LEVEL_VALUE ||
                     indicatorLevel == FatScalUtil.HIGH_LEVEL_VALUE)) {//非健康指标
                 segmentedDataList.get(i).setClassifyBegain(true);
-                segmentedDataList.get(i).setClassifyCount(highLevelDataList.size() + lowLevelDataList.size());
+                segmentedDataList.get(i).setClassifyCount(unNormalLevelDataList.size());
                 hasFindUnHealth = true;
             }
             if (!hasFindHealth && (indicatorLevel == FatScalUtil.NORMAL_LEVEL_VALUE)) {//健康指标
