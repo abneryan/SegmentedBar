@@ -15,6 +15,8 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -143,14 +145,17 @@ public class SegementedPresenter implements SegemtedBarContract.Presenter {
                         ArrayList<Segment> lowSegments = new ArrayList<>();
                         for(int n = 0; n<minStandardIndex; n++){
                             Segment segment = new Segment();
-                            if(n< FatScalUtil.SEGMENT_BG_COLORS.length){
+                            if(n< FatScalUtil.STANDARD_COLOR_INDEX){
                                 segment.setColor(FatScalUtil.SEGMENT_BG_COLORS[FatScalUtil.STANDARD_COLOR_INDEX - (1+n)]);
                             } else{
                                 segment.setColor(FatScalUtil.SEGMENT_BG_COLORS[0]);
                             }
-
-                            segment.setDescriptionText(indicatorResultRange.get(n).getRangeName());
                             lowSegments.add(segment);
+                        }
+                        Collections.reverse(lowSegments);
+                        for(int n = 0; n<lowSegments.size(); n++){
+                            Segment segment = lowSegments.get(n);
+                            segment.setDescriptionText(indicatorResultRange.get(n).getRangeName());
                         }
 
                         //标准右侧
